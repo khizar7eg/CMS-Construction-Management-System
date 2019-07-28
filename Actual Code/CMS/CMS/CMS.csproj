@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57E0E8F4-7453-4B2D-BEA5-C1BF393F9438}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\deploy\CMS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>038CFD5B684C044E6A9674FBC39BD05B306473B6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\bu\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllTables.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Budget-New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget-New.Designer.cs">
+      <DependentUpon>Budget-New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Budget-Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget-Update.Designer.cs">
+      <DependentUpon>Budget-Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Budget-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget-View.Designer.cs">
+      <DependentUpon>Budget-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetCRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetCRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BudgetDS1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetDS1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetRP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BudgetRP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CMSDataSet1CS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSDataSet1CS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CMSDataSet1SS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMSDataSet1SS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs" />
+    <Compile Include="Construction Task-New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Construction Task-New.Designer.cs">
+      <DependentUpon>Construction Task-New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Construction Task-Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Construction Task-Update.Designer.cs">
+      <DependentUpon>Construction Task-Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Construction Task-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Construction Task-View.Designer.cs">
+      <DependentUpon>Construction Task-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Material-New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material-New.Designer.cs">
+      <DependentUpon>Material-New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Material-Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material-Update.Designer.cs">
+      <DependentUpon>Material-Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Material-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material-View.Designer.cs">
+      <DependentUpon>Material-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Project-New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project-New.Designer.cs">
+      <DependentUpon>Project-New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project-Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project-Update.Designer.cs">
+      <DependentUpon>Project-Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project-View.Designer.cs">
+      <DependentUpon>Project-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase-New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase-New.Designer.cs">
+      <DependentUpon>Purchase-New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase-Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase-Update.Designer.cs">
+      <DependentUpon>Purchase-Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase-View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase-View.Designer.cs">
+      <DependentUpon>Purchase-View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QProject.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Designer.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Budget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Budget.Designer.cs">
+      <DependentUpon>Budget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Material.Designer.cs">
+      <DependentUpon>Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Construction Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Construction Task.Designer.cs">
+      <DependentUpon>Construction Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Budget-New.resx">
+      <DependentUpon>Budget-New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Budget-Update.resx">
+      <DependentUpon>Budget-Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Budget-View.resx">
+      <DependentUpon>Budget-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudgetCRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BudgetCRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BudgetRP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BudgetRP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Construction Task-New.resx">
+      <DependentUpon>Construction Task-New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Construction Task-Update.resx">
+      <DependentUpon>Construction Task-Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Construction Task-View.resx">
+      <DependentUpon>Construction Task-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material-New.resx">
+      <DependentUpon>Material-New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material-Update.resx">
+      <DependentUpon>Material-Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material-View.resx">
+      <DependentUpon>Material-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project-New.resx">
+      <DependentUpon>Project-New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project-Update.resx">
+      <DependentUpon>Project-Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project-View.resx">
+      <DependentUpon>Project-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase-New.resx">
+      <DependentUpon>Purchase-New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase-Update.resx">
+      <DependentUpon>Purchase-Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase-View.resx">
+      <DependentUpon>Purchase-View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.resx">
+      <DependentUpon>Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Budget.resx">
+      <DependentUpon>Budget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Material.resx">
+      <DependentUpon>Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Construction Task.resx">
+      <DependentUpon>Construction Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AllTables.xsc">
+      <DependentUpon>AllTables.xsd</DependentUpon>
+    </None>
+    <None Include="AllTables.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllTables.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllTables.xss">
+      <DependentUpon>AllTables.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetDS1.xsc">
+      <DependentUpon>BudgetDS1.xsd</DependentUpon>
+    </None>
+    <None Include="BudgetDS1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BudgetDS1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BudgetDS1.xss">
+      <DependentUpon>BudgetDS1.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1.xsc">
+      <DependentUpon>CMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CMSDataSet1.xss">
+      <DependentUpon>CMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1CS.xsc">
+      <DependentUpon>CMSDataSet1CS.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1CS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMSDataSet1CS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CMSDataSet1CS.xss">
+      <DependentUpon>CMSDataSet1CS.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1SS.xsc">
+      <DependentUpon>CMSDataSet1SS.xsd</DependentUpon>
+    </None>
+    <None Include="CMSDataSet1SS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CMSDataSet1SS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CMSDataSet1SS.xss">
+      <DependentUpon>CMSDataSet1SS.xsd</DependentUpon>
+    </None>
+    <None Include="CMS_TemporaryKey.pfx" />
+    <None Include="PCDS.xsc">
+      <DependentUpon>PCDS.xsd</DependentUpon>
+    </None>
+    <None Include="PCDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCDS.xss">
+      <DependentUpon>PCDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24337406_1495470103839932_1869359224_ngh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\240px-Saint_Andrew%27s_cross_black.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24337406_1495470103839932_1869359224_nghsad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
